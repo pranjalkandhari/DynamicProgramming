@@ -10,6 +10,7 @@
 */
 public class Solution {
 	
+	//USING RECURSION
 	public static int countStepsTo1(int n){
 		
 	/* Your class should be named Solution.
@@ -31,6 +32,18 @@ public class Solution {
         
       return 1 + Math.min( a1 , Math.min( a2 , a3 ) ) ;
       
+	}
+	
+	//NOW USING DP
+	public static int countStepsTo1DP(int n){
+        int storage[] = new int[n+1];
+        for(int i = 2 ; i <= n ; i++ ){
+            int min = storage[i-1];
+            if( i%3 == 0 && min > storage[i/3] ) min = storage[i/3];
+            if( i%2 == 0 && min > storage[i/2] ) min = storage[i/2];
+            storage[i] = min + 1;
+        }
+        return storage[n];
 	}
 	
 }
