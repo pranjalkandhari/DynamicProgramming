@@ -54,7 +54,8 @@ public class Solution {
 
         for(int i = 1 ; i<=m ; i++){
             for(int j = 1 ; j<=n ; j++){
-                if(s1.charAt(m-i) == s2.charAt(n-j)) storage[i][j] = storage[i-1][j-1];
+                if(s1.charAt(m-i) == s2.charAt(n-j)) 
+			storage[i][j] = storage[i-1][j-1];
 
                 else{
                     int op1 = storage[i-1][j];
