@@ -10,21 +10,23 @@ In order to do so you can perform following three operations only :
 The below function is the solution to the above problem
 */
 
-
 public class Solution {
     
   //USING RECURSION
 	  public static int editDistance(String s1, String s2){	
 
             // BASE CASE
-            if(s1 == s2) return 0; 
-            if(s1.length() == 0) return s2.length();
-            if(s2.length() == 0) return s1.length();
+            if(s1 == s2)
+		    return 0; 
+            if(s1.length() == 0)
+		    return s2.length();
+            if(s2.length() == 0)
+		    return s1.length();
 
-            if(s1.charAt(0) == s2.charAt(0)) return editDistance(s1.substring(1) , s2.substring(1) );
+            if(s1.charAt(0) == s2.charAt(0))
+		    return editDistance(s1.substring(1) , s2.substring(1) );
 
             else{ 
-
                 // 1.Insert an element. 
                 int op1 =  1 + editDistance(s1 , s2.substring(1));
 
