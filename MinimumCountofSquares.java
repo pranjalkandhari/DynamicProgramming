@@ -11,7 +11,8 @@ The below function is the solution to the above problem:
 public class Solution {
 	
 public static int minCount(int n) {
-		if(n<=3) return n;
+		if(n<=3) 
+		return n;
         int count[] = new int[n+1];
         count[1] = 1;
         count[2] = 2;
