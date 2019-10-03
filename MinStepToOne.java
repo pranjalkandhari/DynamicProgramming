@@ -20,8 +20,11 @@ public class Solution {
 	 * Taking input and printing output is handled automatically.
 	 */
       //BASE CASE 
-      if( n == 1 ) return 0;
-      
+      if( n == 1 ) 
+      {
+	      return 0;
+      }
+		
       int a1 = countStepsTo1( n-1 );
       int a2 = Integer.MAX_VALUE;
       int a3 = Integer.MAX_VALUE;
