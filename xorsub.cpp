@@ -2,6 +2,7 @@
 #define ull long long
 using namespace std;
 
+//This approach is recrsion with memoization.
 ull maxXor(ull *arr , ull n , ull k , ull save[1001][1024])
 {
     if(n == 1) 
