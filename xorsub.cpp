@@ -42,6 +42,5 @@ int main()
         }
 
         cout<<maxXor(arr , n , k , save)<<endl;
-
     }
 }
